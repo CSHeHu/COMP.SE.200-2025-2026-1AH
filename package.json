@@ -5,8 +5,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no tests are implemented yet \" && exit 1"
+    "test": "c8 mocha",
+    "coverage": "c8 report --reporter=text --reporter=lcov",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   },
+  "c8": {
+    "include": ["src/**/*.js"],
+    "exclude": ["src/.internal/**/*.js"],
+    "reporter": ["text", "text-summary", "lcov"],
+    "check-coverage": true,
+    "lines": 80,
+    "branches": 60,
+    "exclude-report-formats": ["functions"]
+    },
   "author": "",
   "license": "MIT",
   "dependencies": {
