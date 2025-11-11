@@ -15,8 +15,8 @@
     "exclude": ["src/.internal/**/*.js"],
     "reporter": ["text", "text-summary", "lcov"],
     "check-coverage": true,
-    "lines": 10,
-    "branches": 5,
+    "lines": 60,
+    "branches": 50,
     "exclude-report-formats": ["functions"]
     },
   "author": "",
