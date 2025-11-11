@@ -10,6 +10,7 @@
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls"
   },
   "c8": {
+    "all": true,
     "include": ["src/**/*.js"],
     "exclude": ["src/.internal/**/*.js"],
     "reporter": ["text", "text-summary", "lcov"],
