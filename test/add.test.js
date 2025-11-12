@@ -43,11 +43,11 @@ describe('Testing add utility:', () => {
   })
 
   it('TC11: Add undefined to number', () => {
-    expect(add(undefined, 4)).to.equal(0)
+    expect(add(undefined, 4)).to.equal(4)
   })
 
   it('TC12: Add two non-numberic strings', () => {
-    expect(add(a, b)).to.equal(0)
+    expect(add("a", "b")).to.equal(0)
   })
 })
 
