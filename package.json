@@ -16,7 +16,7 @@
     "reporter": ["text", "text-summary", "lcov"],
     "check-coverage": true,
     "lines": 5,
-    "branches": 5,
+    "branches": 10,
     "exclude-report-formats": ["functions"]
     },
   "author": "",
