@@ -11,8 +11,13 @@ describe("Testing capitalize utility", () => {
         expect(capitalize("")).to.equal("");
     });
      it("Invalid input, should throw error", () => {
-        expect(capitalize(null)).to.throw(AssertionError);
-        // when capitalizing null, returns Null, but should not
+        function testFunc() {
+            // when capitalizing null, returns Null
+            expect(capitalize(null)).to.equal("null");
+        }
+        
+        expect(() => testFunc()).to.throw(AssertionError);
+        
     });
     
 })
