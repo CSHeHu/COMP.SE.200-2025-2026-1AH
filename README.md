@@ -1,4 +1,4 @@
-![Coverage Status](https://coveralls.io/repos/github/CSHeHu/COMP.SE.200-2025-2026-1AH/badge.svg?branch=main&kill_cache=1)
+[![Coverage Status](https://coveralls.io/repos/github/CSHeHu/COMP.SE.200-2025-2026-1AH/badge.svg?branch=main&service=github)]
 
 # Student template
 
