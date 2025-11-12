@@ -1,28 +1,26 @@
 import { expect } from "chai";
 import isEmpty from "../src/isEmpty.js";
 
-describe("EmptyTests", () => {
-    it("Should return true for null", () => {
+describe("Testing isEmpty utility: if is empty return true otherwise false", () => {
+    it("Returns true for null value", () => {
         expect(isEmpty(null)).to.equal(true);
     });
-    it("Should return true for int", () => {
+    it("Returns true for intger value", () => {
         expect(isEmpty(1)).to.equal(true);
     });
-    it("Should return true for empty prototype", () => {
+    it("Return true for empty prototype", () => {
         function Person() {}
         expect(isEmpty(Person.prototype)).to.equal(true);
     });
 
-    it("Should return true for non-empty map object", () => {
+    it("Return true for empty map object", () => {
         expect(isEmpty(new Map())).to.equal(true);
     });
-    
-})
-describe("NonEmptyTests", () => {
-    it("Should return false for array", () => {
+    it("Return false for non-empty array", () => {
         expect(isEmpty([1, 2])).to.equal(false);
     });
-    it("Should return false for empty prototype", () => {
+    it("Return false for non-empty dictionary", () => {
         expect(isEmpty({'a': 1})).to.equal(false);
     });
+    
 })
