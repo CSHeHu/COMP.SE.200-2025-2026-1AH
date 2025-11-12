@@ -1,42 +1,52 @@
-import { expect } from 'chai';
-import toNumber from '../src/toNumber.js';
+import { expect } from 'chai'
+import toNumber from '../src/toNumber.js'
 
-describe('Testing toNumber utility: Tests generated with AI assistance (GitHub Copilot)', () => {
-  it('returns numbers unchanged', () => {
-    expect(toNumber(3.2)).to.equal(3.2);
-    expect(toNumber(0)).to.equal(0);
-  });
+describe('Test case 2: Testing toNumber utility:', () => {
+  it('TC1 Retain small float', () => {
+    expect(toNumber(0.001)).to.equal(0.001)
+  })
 
-  it('parses numeric strings', () => {
-    expect(toNumber('3.2')).to.equal(3.2);
-    expect(toNumber('  42  ')).to.equal(42);
-  });
+  it('TC2 Retain large float', () => {
+    expect(toNumber(99999.999)).to.equal(99999.999)
+  })
 
-  it('parses binary and octal string prefixes', () => {
-    expect(toNumber('0b11')).to.equal(3);
-    expect(toNumber('0o7')).to.equal(7);
-  });
+  it('TC3 Retain integer', () => {
+    expect(toNumber(1)).to.equal(1)
+  })
 
-  it('parses hex strings and treats signed hex as bad', () => {
-    expect(toNumber('0x1f')).to.equal(31);
-    // signed hex like '-0x1f' is treated as bad and should produce NaN
-    expect(Number.isNaN(toNumber('-0x1f'))).to.be.true;
-  });
+  it('TC4 Convert boolean to number', () => {
+    expect(toNumber(false)).to.equal(0)
+  })
 
-  it('converts objects via valueOf or toString', () => {
-    const obj = { valueOf() { return 5; } };
-    expect(toNumber(obj)).to.equal(5);
+  it('TC5 Convert string with white spaces to number', () => {
+    expect(toNumber('5.5  ')).to.equal(5.5)
+  })
 
-    const obj2 = { valueOf() { return { a: 1 }; }, toString() { return '7'; } };
-    expect(toNumber(obj2)).to.equal(7);
-  });
+  it('TC6 Try convert text string', () => {
+    expect(toNumber('abc')).to.be.NaN
+  })
 
-  it('returns NaN for symbols', () => {
-    expect(Number.isNaN(toNumber(Symbol('x')))).to.be.true;
-  });
+  it('TC7 Convert binary string to number', () => {
+    expect(toNumber('00001111')).to.equal(15)
+  })
 
-  it('handles null and undefined', () => {
-    expect(toNumber(null)).to.equal(0);
-    expect(Number.isNaN(toNumber(undefined))).to.be.true;
-  });
-});
+  it('TC8 Convert hexadecimal to number', () => {
+    expect(toNumber('0xFF')).to.equal(255)
+  })
+
+  it('TC9 Convert octal string value', () => {
+    expect(toNumber('017')).to.equal(15)
+  })
+
+  it('TC10 Try convert NaN', () => {
+    expect(toNumber(NaN)).to.be.NaN
+  })
+
+  it('TC11 Try convert undefined', () => {
+    expect(toNumber(undefined)).to.be.NaN
+  })
+
+  it('TC12 Try convert null', () => {
+    expect(toNumber(null)).to.be.NaN
+  })
+})

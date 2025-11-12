@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import add from '../src/add.js'
 
-describe('Testing add utility:', () => {
+describe('Test case 1: Testing add utility:', () => {
   it('TC1: add two positive integers', () => {
     expect(add(6, 4)).to.equal(10)
   })
