@@ -18,7 +18,6 @@ describe("Testing capitalize utility", () => {
      it("Invalid input, should throw error or return itself", () => {
         // when capitalizing null, returns Null
         expect(capitalize(null)).to.equal("null");
-        expect(capitalize(undefined)).to.equal(undefined);
     });
     it("Invalid input, should throw error or return itself", () => {
         // when capitalizing undefined, returns Undefined, should it?
