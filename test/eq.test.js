@@ -49,7 +49,7 @@ describe('Testing eq utility: Tests generated with Microsoft Copilot AI (Tuni)',
 
   it('should return false for null compared to undefined', () => {
     expect(eq(null, undefined)).to.be.false;
-    // This also return false, even thoough it shoyld return true.
+    // This also return false, even thoough it should return true.
   });
 
   it('should return true for undefined compared to undefined', () => {
