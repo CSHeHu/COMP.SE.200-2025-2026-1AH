@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/CSHeHu/COMP.SE.200-2025-2026-1AH/badge.svg?branch=main&service=github)](https://coveralls.io/github/CSHeHu/COMP.SE.200-2025-2026-1AH?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/CSHeHu/COMP.SE.200-2025-2026-1AH/badge.svg?branch=main&service=github&kill_cache=1)](https://coveralls.io/github/CSHeHu/COMP.SE.200-2025-2026-1AH?branch=main)
 # Student template
 
 ## Purpose of this repository
