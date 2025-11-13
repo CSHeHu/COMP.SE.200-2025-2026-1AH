@@ -1,24 +1,24 @@
 import { expect } from 'chai'
 import add from '../src/add.js'
 
-describe('Test case 1: Testing add utility:', () => {
+describe('Test suite 1: Testing add utility', () => {
   it('TC1: add two positive integers', () => {
     expect(add(6, 4)).to.equal(10)
   })
 
-  it('TC2: add two negative integers', () => {
+  it('TC2: Add two negative integers', () => {
     expect(add(-2, -4)).to.equal(-6)
   })
 
-  it('TC3: add positive and negative integer', () => {
+  it('TC3: Add positive and negative integer', () => {
     expect(add(5, -2)).to.equal(3)
   })
 
-  it('TC4: add zero to a number', () => {
+  it('TC4: Add zero to a number', () => {
     expect(add(0, 8)).to.equal(8)
   })
 
-  it('TC5: add a number to zero', () => {
+  it('TC5: Add a number to zero', () => {
     expect(add(8, 0)).to.equal(8)
   })
 
