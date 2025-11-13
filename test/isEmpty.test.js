@@ -42,7 +42,7 @@ describe("Test suite 3: Testing isEmpty utility:", () => {
 
     it("TC9: Non-empty typed array", () => {
         
-        expect(isEmpty(new Uint16Array(5))).to.be.false;
+        expect(isEmpty(new Uint16Array([0,1,2,3,4]))).to.be.false;
     });
     it("TC10: Non-empty buffer", () => {
         const buff = Buffer.from([34,54,76])
