@@ -45,5 +45,9 @@ describe('Test suite 6: Testing map utility: Runs array of elements through iter
     const string = "This is string"; 
     expect(map(string, iteratee).to.throw(TypeError));
   });
+  it('TC7: Iteratee is not a function', () => {
+    // @param {Array} array , is what is should be object to be iterated over.
+    expect(() => map([1,2], "a").to.throw(TypeError));
+  });
 
 })
