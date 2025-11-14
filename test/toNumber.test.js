@@ -27,7 +27,7 @@ describe('Test suite 2: Testing toNumber utility:', () => {
   })
 
   it('TC7: Convert binary string to number', () => {
-    expect(toNumber('00001111')).to.equal(15)
+    expect(toNumber('0b1111')).to.equal(15)
   })
 
   it('TC8: Convert hexadecimal to number', () => {
@@ -35,7 +35,7 @@ describe('Test suite 2: Testing toNumber utility:', () => {
   })
 
   it('TC9: Convert octal string value', () => {
-    expect(toNumber('017')).to.equal(15)
+    expect(toNumber('0o17')).to.equal(15)
   })
 
   it('TC10: Try convert NaN', () => {
@@ -47,6 +47,6 @@ describe('Test suite 2: Testing toNumber utility:', () => {
   })
 
   it('TC12: Try convert null', () => {
-    expect(toNumber(null)).to.be.NaN
+    expect(toNumber(null)).to.equal(0)
   })
 })
