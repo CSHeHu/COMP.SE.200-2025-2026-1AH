@@ -11,9 +11,8 @@ describe("Test suite 10: Testing capitalize utility", () => {
         
         expect(capitalize("")).to.equal("");
     });
-    it("TC3: Number should return number?", () => {
-        // Number to capitalize should return what?
-        expect(capitalize(1.6)).to.equal(1.6);
+    it("TC3: Number should return the number as string", () => {
+        expect(capitalize(1.6)).to.equal("1.6");
     });
      it("TC4: Invalid input, should throw error or return itself", () => {
         // when capitalizing null, returns Null

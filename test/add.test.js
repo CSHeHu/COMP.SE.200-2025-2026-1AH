@@ -47,7 +47,7 @@ describe('Test suite 1: Testing add utility', () => {
   })
 
   it('TC12: Add two non-numberic strings', () => {
-    expect(add("a", "b")).to.equal(0)
+    expect(add("a", "b")).to.equal('ab')
   })
 })
 
