@@ -58,6 +58,6 @@ describe('Test suite 5: Testing eq utility: Tests generated with Microsoft Copil
 
   it('TC13: Should return false for number and string with same value', () => {
     expect(eq(1, '1')).to.be.false;
-    // This should return false, but it returns true.
+    // Returns true, but it should return false in strict sense.
   });
 });
