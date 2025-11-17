@@ -49,7 +49,7 @@ describe('Test suite 5: Testing eq utility: Tests generated with Microsoft Copil
 
   it('TC11: Should return false for null compared to undefined', () => {
     expect(eq(null, undefined)).to.be.false;
-    // This also return false, even though it should return true when using strict equality.
+    // This also returns true, even though it should return false when using strict equality.
   });
 
   it('TC12: Should return true for undefined compared to undefined', () => {
